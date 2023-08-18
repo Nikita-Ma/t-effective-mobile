@@ -8,12 +8,17 @@
       </a>
     </button>
     <button mat-button>
-      <a routerLink="register">
+      <a routerLink="register" >
         Register
       </a>
     </button>
-    <button mat-button>
-      <a routerLink="posts">
+    <button mat-button *ngIf="localStorage.getItem('account-data')">
+      <a routerLink="posts" >
+        Posts
+      </a>
+    </button>
+    <button mat-raised-button disabled *ngIf="!localStorage.getItem('account-data')">
+      <a routerLink="/">
         Posts
       </a>
     </button>

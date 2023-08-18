@@ -33,4 +33,5 @@ export class PostsComponent {
     this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe({next: (data: any) => this.arrPosts = data});
   }
 
+  protected readonly localStorage = localStorage;
 }
