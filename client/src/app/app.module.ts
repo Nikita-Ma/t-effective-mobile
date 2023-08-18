@@ -14,6 +14,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgIf} from "@angular/common";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -28,8 +29,9 @@ import {NgIf} from "@angular/common";
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
-    FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule, NgIf,
-    MatFormFieldModule, MatInputModule, MatButtonModule, MatSnackBarModule
+    FormsModule, ReactiveFormsModule, NgIf,
+    MatFormFieldModule, MatInputModule, MatSnackBarModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
