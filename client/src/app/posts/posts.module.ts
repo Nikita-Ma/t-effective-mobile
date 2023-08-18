@@ -9,7 +9,6 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCardModule} from "@angular/material/card";
-import {AuthModule} from "../auth/auth.module";
 
 
 @NgModule({
@@ -23,8 +22,7 @@ import {AuthModule} from "../auth/auth.module";
     MatToolbarModule,
     FormsModule, ReactiveFormsModule, NgIf,
     MatFormFieldModule, MatInputModule, MatSnackBarModule,
-    MatCardModule,
-    AuthModule
+    MatCardModule
   ],
   exports: [
     PostsComponent
