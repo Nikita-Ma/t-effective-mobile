@@ -1,13 +1,21 @@
 <!--Header-->
-<h1 [ngStyle]="{'font-size':'24px',
-                'font-family':'Roboto',
-                'text-align':'center',
-                'margin-top':'20px'}">
-  Test Task pre
-  Junior angular dev
-</h1>
-<!-- Button container -->
-<div [ngStyle]="{'text-align':'center'}">
-  <button mat-raised-button color="primary">Auth</button>
-  <button mat-raised-button color="disabled">Posts</button>
-</div>
+<mat-toolbar>
+  <span>Test Task pre Junior angular dev</span>
+  <div [ngStyle]="{'margin-left':'auto'}">
+    <button mat-button>
+      <a routerLink="auth">
+        Auth
+      </a>
+    </button>
+    <button mat-button>
+      <a routerLink="posts">
+        Posts
+      </a>
+    </button>
+  </div>
+</mat-toolbar>
+
+
+<router-outlet>
+
+</router-outlet>

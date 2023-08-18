@@ -7,6 +7,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {PostsComponent} from "./posts/posts.component";
 import {AuthComponent} from "./auth/auth.component";
+import {RouterModule} from "@angular/router";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 
 @NgModule({
@@ -17,9 +19,11 @@ import {AuthComponent} from "./auth/auth.component";
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
