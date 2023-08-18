@@ -17,6 +17,7 @@ import {AuthModule} from "./auth/auth.module";
 import {PostsModule} from "./posts/posts.module";
 import {HeaderComponent} from './header/header.component';
 import {HeaderModule} from "./header/header.module";
+import {RegisterModule} from "./register/register.module";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {HeaderModule} from "./header/header.module";
     AppRoutingModule,
     HeaderModule,
     AuthModule,
-    PostsModule
+    PostsModule,
+    RegisterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
