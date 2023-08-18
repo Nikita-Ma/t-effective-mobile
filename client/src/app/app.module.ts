@@ -9,7 +9,11 @@ import {PostsComponent} from "./posts/posts.component";
 import {AuthComponent} from "./auth/auth.component";
 import {RouterModule} from "@angular/router";
 import {MatToolbarModule} from "@angular/material/toolbar";
-
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {NgIf} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -24,6 +28,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
+    FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule, NgIf,
+    MatFormFieldModule, MatInputModule, MatButtonModule, MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
