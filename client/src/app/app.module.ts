@@ -15,6 +15,8 @@ import {NgIf} from "@angular/common";
 import {MatCardModule} from "@angular/material/card";
 import {AuthModule} from "./auth/auth.module";
 import {PostsModule} from "./posts/posts.module";
+import {HeaderComponent} from './header/header.component';
+import {HeaderModule} from "./header/header.module";
 
 @NgModule({
   declarations: [
@@ -24,12 +26,7 @@ import {PostsModule} from "./posts/posts.module";
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    FormsModule, ReactiveFormsModule, NgIf,
-    MatFormFieldModule, MatInputModule, MatSnackBarModule,
-    MatCardModule,
+    HeaderModule,
     AuthModule,
     PostsModule
   ],
