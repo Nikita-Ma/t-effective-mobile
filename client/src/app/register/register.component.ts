@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-register',
@@ -10,8 +11,10 @@ import {Router} from "@angular/router";
 export class RegisterComponent {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private titleService: Title
   ) {
+    this.titleService.setTitle('Register')
   }
 
   public _email = ''
@@ -28,9 +31,18 @@ export class RegisterComponent {
     }
   }
 
-  public sendFormData(): string | void {
-    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  /*
+  * @HowImprove:
+  * 1. Catching specific error (incorrect email and etc.).
+  * 2. Auto fetch if we have account data in localStorage.
+  * 3. Compare localStorage password with this enter.
+  * --------------------------------------------------
+  * p.s. You can see any realization auth in my GH account.
+  * */
 
+  public sendFormData(): string | void {
+    console.log(this._email, this._password)
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!this._password.length || !regex.test(this._email)) {
       console.error('Enter correct data!')
       return
