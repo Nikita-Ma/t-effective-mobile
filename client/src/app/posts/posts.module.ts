@@ -9,21 +9,22 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCardModule} from "@angular/material/card";
+import {RouterLink} from "@angular/router";
 
 
 @NgModule({
   declarations: [
     PostsComponent
   ],
-  imports: [
-    CommonModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    FormsModule, ReactiveFormsModule, NgIf,
-    MatFormFieldModule, MatInputModule, MatSnackBarModule,
-    MatCardModule
-  ],
+    imports: [
+        CommonModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatToolbarModule,
+        FormsModule, ReactiveFormsModule, NgIf,
+        MatFormFieldModule, MatInputModule, MatSnackBarModule,
+        MatCardModule, RouterLink
+    ],
   exports: [
     PostsComponent
   ]

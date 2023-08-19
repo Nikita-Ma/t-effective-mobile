@@ -1,14 +1,14 @@
 <div [ngStyle]="{'display':'flex', 'flex-wrap':'wrap', 'justify-content':'center'}"
      *ngIf="localStorage.getItem('account-data')">
-  <mat-card class="example-card" *ngFor="arrPosts| json let item of arrPosts">
+  <mat-card class="example-card">
     <mat-card-header>
-      <mat-card-title> {{item.title}}</mat-card-title>
-      <mat-card-subtitle> User ID {{item.userId}} | Post ID {{item.id}}</mat-card-subtitle>
+      <mat-card-title> {{arrPostDetails.title}}</mat-card-title>
+      <mat-card-subtitle> User ID {{arrPostDetails.userId}} | Post ID {{arrPostDetails.id}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p> {{item.body}}</p>
+      <p> {{arrPostDetails.body}}</p>
     </mat-card-content>
-    <button [ngStyle]="{'margin-top':'auto'}" mat-button><a routerLink="{{item.id}}">Details</a></button>
+    <button [ngStyle]="{'margin-top':'auto'}" mat-button><a routerLink="{{'/posts'}}">Posts page</a></button>
   </mat-card>
 </div>
 <div *ngIf="!localStorage.getItem('account-data')">

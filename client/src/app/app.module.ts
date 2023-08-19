@@ -19,6 +19,7 @@ import {HeaderComponent} from './header/header.component';
 import {HeaderModule} from "./header/header.module";
 import {RegisterModule} from "./register/register.module";
 import {HttpClientModule} from "@angular/common/http";
+import {PostDetailsModule} from "./post-details/post-details.module";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {HttpClientModule} from "@angular/common/http";
     AuthModule,
     PostsModule,
     RegisterModule,
-    HttpClientModule
+    HttpClientModule,
+    PostDetailsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
