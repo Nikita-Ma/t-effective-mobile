@@ -1,9 +1,10 @@
-<h1 [ngStyle]="{'text-align':'center'}">Log in!</h1>
+<h1 [ngStyle]="{'text-align':'center'}">Register!</h1>
 <form class="example-form">
   <span>Email</span>
   <mat-form-field class="example-full-width">
     <mat-label>Email</mat-label>
-    <input [name]="'email'" type="email" matInput [formControl]="emailFormControl" placeholder="your-email@example.com" (change)="saveFormData($event)">
+    <input [name]="'email'" type="email" matInput [formControl]="emailFormControl" placeholder="your-email@example.com"
+           (change)="saveFormData($event)">
     <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
       Please enter a valid email address
     </mat-error>
@@ -14,13 +15,14 @@
   <span>Password</span>
   <mat-form-field class="example-full-width">
     <mat-label>Password</mat-label>
-    <input [name]="'password'" type="password" matInput [formControl]="passwordFormControl" placeholder="your-password" (change)="saveFormData($event)">
-    <mat-error *ngIf="emailFormControl.hasError('password') && !emailFormControl.hasError('required')">
+    <input [name]="'password'" type="password" matInput [formControl]="passwordFormControl"
+           placeholder="Your hard password" (change)=saveFormData($event)>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
       Please enter a valid email address
     </mat-error>
     <mat-error *ngIf="emailFormControl.hasError('required')">
       Password is <strong>required</strong>
     </mat-error>
   </mat-form-field>
-  <button type="submit" mat-button color="primary" (click)="sendFormData()">Login!</button>
+  <button mat-button color="primary" (click)="sendFormData()" type="submit">Register!</button>
 </form>

@@ -1,0 +1,6 @@
+.example-card {
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

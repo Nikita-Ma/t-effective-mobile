@@ -1,0 +1,26 @@
+<!--Header-->
+<mat-toolbar>
+  <span>Test Task pre Junior angular dev</span>
+  <div [ngStyle]="{'margin-left':'auto'}">
+    <button mat-button>
+      <a routerLink="auth">
+        Auth
+      </a>
+    </button>
+    <button mat-button>
+      <a routerLink="register" >
+        Register
+      </a>
+    </button>
+    <button mat-button *ngIf="localStorage.getItem('account-data')">
+      <a routerLink="posts" >
+        Posts
+      </a>
+    </button>
+    <button mat-raised-button disabled *ngIf="!localStorage.getItem('account-data')">
+      <a routerLink="/">
+        Posts
+      </a>
+    </button>
+  </div>
+</mat-toolbar>
