@@ -22,6 +22,8 @@ did was not hard, but it can be improved.
 
 * `cd client`
 
+* `npm install`
+
 * `ng serve`
 
 ## Actual Routes
