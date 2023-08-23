@@ -1,16 +1,22 @@
 <div [ngStyle]="{'display':'flex', 'flex-wrap':'wrap', 'justify-content':'center'}"
      *ngIf="localStorage.getItem('account-data')">
-  <mat-card class="example-card" *ngFor="arrPosts| json let item of arrPosts">
-    <mat-card-header>
-      <mat-card-title> {{item.title}}</mat-card-title>
-      <mat-card-subtitle> User ID {{item.userId}} | Post ID {{item.id}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p> {{item.body}}</p>
-    </mat-card-content>
-    <button [ngStyle]="{'margin-top':'auto'}" mat-button><a routerLink="{{item.id}}">Details</a></button>
-  </mat-card>
+  <div *ngIf="arrPosts">
+
+    <mat-card class="example-card" *ngFor="arrPosts| json let item of arrPosts">
+      <mat-card-header>
+        <mat-card-title> {{item.title}}</mat-card-title>
+        <mat-card-subtitle> User ID {{item.userId}} | Post ID {{item.id}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p> {{item.body}}</p>
+      </mat-card-content>
+      <button [ngStyle]="{'margin-top':'auto'}" mat-button><a routerLink="{{item.id}}">Details</a></button>
+    </mat-card>
+  </div>
 </div>
+  <div *ngIf="!arrPosts.length">
+    <code>data loading..</code>
+  </div>
 <div *ngIf="!localStorage.getItem('account-data')">
   <h1>You need create account!</h1>
   <code>401</code>

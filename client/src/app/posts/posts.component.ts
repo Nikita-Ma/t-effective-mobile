@@ -34,7 +34,8 @@ export class PostsComponent {
     this.postsService.getData().subscribe({
       next: (data: any) => {
         this.arrPosts = data
-      }
+      },
+
     })
 
   }
