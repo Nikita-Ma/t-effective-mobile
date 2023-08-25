@@ -10,12 +10,14 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCardModule} from "@angular/material/card";
 import { RegisterDirective } from './register.directive';
+import { RegisterPipe } from './register.pipe';
 
 
 @NgModule({
   declarations: [
     RegisterComponent,
-    RegisterDirective
+    RegisterDirective,
+    RegisterPipe
   ],
   imports: [
     CommonModule,
