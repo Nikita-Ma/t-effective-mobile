@@ -4,6 +4,7 @@ export const appGuard = (route: ActivatedRouteSnapshot, state: RouterStateSnapsh
 
   // получаем id
   console.log(route);
+  console.log(state);
   return confirm('Вы уверены, что хотите перейти?');
 
   // остальной код

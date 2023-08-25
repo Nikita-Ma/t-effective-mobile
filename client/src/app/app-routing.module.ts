@@ -6,9 +6,10 @@ import {AuthComponent} from "./auth/auth.component";
 import {RegisterComponent} from "./register/register.component";
 import {PostDetailsComponent} from "./post-details/post-details.component";
 import {appGuard} from "./app.guard";
+import {exitAboutGuard} from "./exit.app.guard";
 
 const routes: Routes = [
-  {path: 'posts', component: PostsComponent, canActivate: [appGuard]},
+  {path: 'posts', component: PostsComponent, canActivate: [appGuard], canDeactivate: [exitAboutGuard]},
   {path: 'auth', component: AuthComponent},
   {path: 'register', component: RegisterComponent},
   {

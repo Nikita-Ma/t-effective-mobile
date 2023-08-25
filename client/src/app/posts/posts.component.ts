@@ -27,6 +27,14 @@ export class PostsComponent {
   // }> = []
   arrPosts: any = []
 
+  saved: boolean = false;
+  save(){
+    this.saved = true;
+  }
+
+
+
+
   ngOnInit() {
     // Rewrite on service posts.service.ts
     // this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe({next: (data: any) => this.arrPosts = data});
