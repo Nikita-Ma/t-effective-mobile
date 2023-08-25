@@ -56,4 +56,6 @@ export class RegisterComponent {
 
   ngOnInit() {
   }
+
+  protected readonly Math = Math;
 }
